@@ -70,3 +70,23 @@ Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git c
 - `git push <remote> --force`: 😱
 - `git push <remote> --tags`: This flag sends all of your local tags to the remote repository as tags are not automatically pushed.
 - **Deleting a remote branch or tag**: `git branch -D branch_name` followed by `git push origin :branch_name`
+
+## Day 2 (Aug 13)
+
+Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git revert`, `git reflog` and `git rebase`.
+
+### `git tag`
+
+- `git tag <tagname> <commit_hash>`: Lightweight tags.
+- `git tag -a <tagname>`: Annotated tags store extra meta data such as: the tagger name, email, and date.
+- `git tag -l <wildcard>`: List tags with wildcard
+- In the event that you must update an existing tag, the `-f FORCE` option must be used.
+- `git push --tags`: 👍
+
+### `git checkout`
+
+- `git checkout -b ＜new-branch＞ ＜existing-branch＞`
+
+### `git revert`
+
+- It will create a new commit with the inverse of the last commit.
