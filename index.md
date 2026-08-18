@@ -90,3 +90,7 @@ Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git re
 ### `git revert`
 
 - It will create a new commit with the inverse of the last commit.
+
+## Day 3 (Aug 17)
+
+Read about Box model and revised git.
