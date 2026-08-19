@@ -93,4 +93,56 @@ Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git re
 
 ## Day 3 (Aug 17)
 
-Read about Box model and revised git.
+Read about Box model, revised git and started reading about HTML.
+
+## Day 4 (Aug 18)
+
+Read about HTML document structure, semantic tags, headings and links.
+
+- HTML template:
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>Title</title>
+      <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+      <!-- Body -->
+    </body>
+  </html>
+  ```
+
+- Favicon: `<link rel="icon" type="image/png" href="/images/favicon.png">`
+- [<script src="..." async/defer>](https://javascript.info/script-async-defer)
+- Some Semantic HTML Tags: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>` and `<footer>`.
+
+  ```html
+  <body>
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>
+    <article>First post</article>
+    <article>Second post</article>
+  </main>
+  <aside>Aside</aside>
+  <footer>Footer</footer>
+  </body>
+  ```
+
+- [`tabindex`](https://web.dev/learn/html/attributes#tabindex) attribute
+
+- `taget="_blank"` attribute on `<a>` tag open link in a new tab.
+- `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
+- Description list, i.e., `<dl>` tag:
+
+  ```html
+  <dl>
+    <dt>Description Term 1</dt>
+    <dd>Description Detail 1</dd>
+    <dt>Description Term 2</dt>
+    <dd>Description Detail 2</dd>
+  </dl>
+  ```
