@@ -1,9 +1,50 @@
 # Progress tracker
 
+## Day 6 (Aug 20)
+
+Finished the remote section of [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
+Read about HTML: `<image>` and `<table>`.
+
+- `srcset` attribute:
+
+  ```html
+  <img src="images/eve.png" alt="Eve"
+    srcset="images/eve.png 400w, images/eve-xl.jpg 800w"
+    sizes="(max-width: 800px) 400px, 800px" />
+  ```
+
+- `<picture>` and `<source>` tags (!?):
+
+  ```html
+  <picture>
+    <source
+      srcset="images/eve.png 400w, images/eve-xl.jpg 800w"
+      sizes="(max-width: 800px) 400px, 800px">
+    <img src="images/eve.png" alt="Eve">
+  </picture>
+  ```
+
+- At a minimum, each foreground image should include `src` and `alt` attributes.
+- Lazy loading: `<img src="switch.svg" alt="light switch" loading="lazy" />`
+- The preferred method of naming a table is the semantic element, `<caption>`.
+- Table sectioning:
+  
+  ```html
+  <table>
+    <caption></caption>
+    <thead></thead>
+    <tbody></tbody>
+    <tfoot></tfoot>
+  </table>
+  ```
+
+- To join multiple cells into a single cell, use `colspan` and `rowspan` attributes.
+- Only use a table for data.
+
 ## Day 5 (Aug 19)
 
 Read about HTML: lists and navigation (table of content and page breadcrumbs). \
-Finished the [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
+Finished the main section of [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
 
 - `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
 - Description list, i.e., `<dl>` tag:
