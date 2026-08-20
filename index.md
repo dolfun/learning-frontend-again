@@ -70,7 +70,7 @@ Read about HTML document structure, semantic tags, headings and links.
 
 - `taget="_blank"` attribute on `<a>` tag open link in a new tab.
 
-## Day 3 (August 17)
+## Day 3 (Aug 17)
 
 Read about Box model, revised git and started reading about HTML.
 
@@ -94,7 +94,7 @@ Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git re
 
 - It will create a new commit with the inverse of the last commit.
 
-## Day 1 (August 12)
+## Day 1 (Aug 12)
 
 Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git commit`, `.gitignore`, `git fetch`, `git pull` and `git push`.
 
