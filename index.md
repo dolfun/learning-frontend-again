@@ -1,5 +1,99 @@
 # Progress tracker
 
+## Day 5 (Aug 19)
+
+Read about HTML: lists and navigation (table of content and page breadcrumbs). \
+Finished the [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
+
+- `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
+- Description list, i.e., `<dl>` tag:
+
+  ```html
+  <dl>
+    <dt>Description Term 1</dt>
+    <dd>Description Detail 1</dd>
+    <dt>Description Term 2</dt>
+    <dd>Description Detail 2</dd>
+  </dl>
+  ```
+
+- "Skip to content" link:
+  
+  ```html
+  <a href="#main" class="skip-link button">Skip to content</a>
+  <main id="main">
+    Content
+  </main>
+  ```
+
+- `aria-label` and `aria-labelledby` attributes define the accessible name of an element.
+- The current page could be identified with the `aria-current="page"` attribute.
+
+## Day 4 (Aug 18)
+
+Read about HTML document structure, semantic tags, headings and links.
+
+- HTML template:
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <title>Title</title>
+      <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+      <!-- Body -->
+    </body>
+  </html>
+  ```
+
+- Favicon: `<link rel="icon" type="image/png" href="/images/favicon.png">`
+- [<script src="..." async/defer>](https://javascript.info/script-async-defer)
+- Some Semantic HTML Tags: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>` and `<footer>`.
+
+  ```html
+  <body>
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>
+    <article>First post</article>
+    <article>Second post</article>
+  </main>
+  <aside>Aside</aside>
+  <footer>Footer</footer>
+  </body>
+  ```
+
+- [`tabindex`](https://web.dev/learn/html/attributes#tabindex) and [`contenteditable`](https://web.dev/learn/html/attributes#contenteditable) attributes
+
+- `taget="_blank"` attribute on `<a>` tag open link in a new tab.
+
+## Day 3 (August 17)
+
+Read about Box model, revised git and started reading about HTML.
+
+## Day 2 (Aug 13)
+
+Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git revert`, `git reflog` and `git rebase`.
+
+### `git tag`
+
+- `git tag <tagname> <commit_hash>`: Lightweight tags.
+- `git tag -a <tagname>`: Annotated tags store extra meta data such as: the tagger name, email, and date.
+- `git tag -l <wildcard>`: List tags with wildcard
+- In the event that you must update an existing tag, the `-f FORCE` option must be used.
+- `git push --tags`: 👍
+
+### `git checkout`
+
+- `git checkout -b ＜new-branch＞ ＜existing-branch＞`
+
+### `git revert`
+
+- It will create a new commit with the inverse of the last commit.
+
 ## Day 1 (August 12)
 
 Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git commit`, `.gitignore`, `git fetch`, `git pull` and `git push`.
@@ -70,97 +164,3 @@ Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git c
 - `git push <remote> --force`: 😱
 - `git push <remote> --tags`: This flag sends all of your local tags to the remote repository as tags are not automatically pushed.
 - **Deleting a remote branch or tag**: `git branch -D branch_name` followed by `git push origin :branch_name`
-
-## Day 2 (Aug 13)
-
-Read about `git tag`, `git log`, `git branch`, `git merge`, `git reset`, `git revert`, `git reflog` and `git rebase`.
-
-### `git tag`
-
-- `git tag <tagname> <commit_hash>`: Lightweight tags.
-- `git tag -a <tagname>`: Annotated tags store extra meta data such as: the tagger name, email, and date.
-- `git tag -l <wildcard>`: List tags with wildcard
-- In the event that you must update an existing tag, the `-f FORCE` option must be used.
-- `git push --tags`: 👍
-
-### `git checkout`
-
-- `git checkout -b ＜new-branch＞ ＜existing-branch＞`
-
-### `git revert`
-
-- It will create a new commit with the inverse of the last commit.
-
-## Day 3 (Aug 17)
-
-Read about Box model, revised git and started reading about HTML.
-
-## Day 4 (Aug 18)
-
-Read about HTML document structure, semantic tags, headings and links.
-
-- HTML template:
-
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <title>Title</title>
-      <meta name="viewport" content="width=device-width" />
-    </head>
-    <body>
-      <!-- Body -->
-    </body>
-  </html>
-  ```
-
-- Favicon: `<link rel="icon" type="image/png" href="/images/favicon.png">`
-- [<script src="..." async/defer>](https://javascript.info/script-async-defer)
-- Some Semantic HTML Tags: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>` and `<footer>`.
-
-  ```html
-  <body>
-  <header>Header</header>
-  <nav>Nav</nav>
-  <main>
-    <article>First post</article>
-    <article>Second post</article>
-  </main>
-  <aside>Aside</aside>
-  <footer>Footer</footer>
-  </body>
-  ```
-
-- [`tabindex`](https://web.dev/learn/html/attributes#tabindex) and [`contenteditable`](https://web.dev/learn/html/attributes#contenteditable) attributes
-
-- `taget="_blank"` attribute on `<a>` tag open link in a new tab.
-
-## Day 5 (Aug 19)
-
-Read about HTML: lists and navigation (table of content and page breadcrumbs). \
-Finished the [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
-
-- `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
-- Description list, i.e., `<dl>` tag:
-
-  ```html
-  <dl>
-    <dt>Description Term 1</dt>
-    <dd>Description Detail 1</dd>
-    <dt>Description Term 2</dt>
-    <dd>Description Detail 2</dd>
-  </dl>
-  ```
-
-- "Skip to content" link:
-  
-  ```html
-  <a href="#main" class="skip-link button">Skip to content</a>
-  <main id="main">
-    Content
-  </main>
-  ```
-
-- `aria-label` and `aria-labelledby` attributes define the accessible name of an element.
-- The current page could be identified with the `aria-current="page"` attribute.
