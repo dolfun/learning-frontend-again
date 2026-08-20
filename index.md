@@ -132,9 +132,15 @@ Read about HTML document structure, semantic tags, headings and links.
   </body>
   ```
 
-- [`tabindex`](https://web.dev/learn/html/attributes#tabindex) attribute
+- [`tabindex`](https://web.dev/learn/html/attributes#tabindex) and [`contenteditable`](https://web.dev/learn/html/attributes#contenteditable) attributes
 
 - `taget="_blank"` attribute on `<a>` tag open link in a new tab.
+
+## Day 5 (Aug 19)
+
+Read about HTML: lists and navigation (table of content and page breadcrumbs). \
+Finished the [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
+
 - `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
 - Description list, i.e., `<dl>` tag:
 
@@ -146,3 +152,15 @@ Read about HTML document structure, semantic tags, headings and links.
     <dd>Description Detail 2</dd>
   </dl>
   ```
+
+- "Skip to content" link:
+  
+  ```html
+  <a href="#main" class="skip-link button">Skip to content</a>
+  <main id="main">
+    Content
+  </main>
+  ```
+
+- `aria-label` and `aria-labelledby` attributes define the accessible name of an element.
+- The current page could be identified with the `aria-current="page"` attribute.
