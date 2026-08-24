@@ -1,8 +1,66 @@
 # Progress tracker
 
+## Day 7 (Aug 21)
+
+Read about HTML forms and CSS Selectors.
+
+- To explicitly associate a form control with a `<label>`, include the `for` attribute on the `<label>`, the value being the `id` of the form control it is associated with:
+  
+  ```html
+  <form method="GET">
+    <label for="student">Pick a student:</label>
+    <select name="student" id="student">
+      <option value="hoover">Hoover Sukhdeep</option>
+      <option>Blendan Smooth</option>
+      <option value="toasty">Toasty McToastface</option>
+    </select>
+    <input type="submit" value="Submit Form">
+  </form>
+  ```
+
+- To provide implicit labels, include the form control between the opening and closing `<label>` tags.
+
+- While individual input, select, and text areas are labeled with `<label>`, groups of form controls are labeled by the contents of the `<legend>` of the `<fieldset>` that groups them.
+- The `method` attribute on the `<form>` tag defines the HTTP protocol of the request.
+- With `GET`, the form data is sent as a parameter string of `name=value` pairs, appended to the action's URL.
+- With `POST`, the data is appended to the body of the HTTP request.
+- Radio button group:
+  
+  ```html
+  <input type="radio" name="student" value="blendan"> Blendan
+  <input type="radio" name="student" value="hoover"> Hoover
+  <input type="radio" name="student" value="toasty"> Toasty
+  ```
+
+  The `name` attribute should be unique to the group.
+
+- The file input type `<input type="file">` enables uploading files via forms.
+- One cannot start a class (or an ID) with a number.
+- CSS Selectors:
+  - Universal selector - `*`
+  - Type selector - `section`
+  - Class selector - `.my-class`
+  - ID selector - `#rad`
+  - Attribute selector - `[data-type]`, `[data-type='primary']`
+  - Compound selectors - `a.my-class`
+- You can use case-sensitive attribute selectors by adding an `s` operator to your attribute selector: `[data-type='primary' s]`
+- Attribute matcing:
+  - `[href*='example.com']`: A href that contains "example.com"
+  - `[href^='https']`: A href that starts with https
+  - `[href$='.com']`: A href that ends with .com
+- Combinators:
+  - Descendant (`div p`): It targets any `<p>` inside the `<div>`.
+  - Child (`div > p`): `<p>` must sit exactly one level below the `<div>`.
+  - Subsequent sibling (`h1 ~ p`): Targets all `<p>` elements that follow the `<h1>`.
+  - Next sibling (`h1 + p`): Targets only the very next sibling.
+- Examples:
+  - `.top * + *`: Any element inside `.top` that immediately follows another element.
+  - `.top > * + *::before`: The `::before` of any direct child of `.top` that immediately follows another direct child.
+- [A tool that translates CSS selectors into plain-english explainers](https://kittygiraudel.github.io/selectors-explained/?)
+
 ## Day 6 (Aug 20)
 
-Finished the remote section of [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
+Finished the remote section of [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial. \
 Read about HTML: `<image>` and `<table>`.
 
 - `srcset` attribute:
