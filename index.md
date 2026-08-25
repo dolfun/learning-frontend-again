@@ -1,5 +1,43 @@
 # Progress tracker
 
+## Day 8 (Aug 24)
+
+Finished the [CSS Diner](https://flukeout.github.io/) minigame.\
+Read about CSS: psuedo-selectors and flexbox. \
+Re-read CSS layout, box model and sticky.
+
+- Psuedo-selectors:
+  - `:first-child`: Select a first child element inside of another element.
+  - `:only-child`: Select an element that are the only element inside of another one.
+  - `:last-child`: Select the last element inside of another element.
+  - `:nth-child(n)`: Select an element by its order in another element.
+  - `:nth-last-child(n)`: Select an element by its order in another element, counting from the back.
+  - `:first-of-type`: Select the first element of a specific type.
+  - `:nth-of-type(n)`: Selects a specific element based on its type and order in another element - or even or odd instances of that element.
+  - `:nth-of-type(an+b)`: The nth-of-type formula selects every ath element, starting the count at a specific instance (bth) of that element.
+  - `:only-of-type`: Select elements that are the only ones of their type within of their parent element
+  - `:last-of-type`: Select the last element of a specific type.
+  - `:empty`: Select elements that don't have children.
+- **Negation Pseudo-class**: `:not(X)`
+
+- Flexbox is enabled with `display: flex`
+- `flex-direction: row|column` determines the primary and cross axis.
+- We can change how children are distributed along the primary axis using the `justify-content` property and for the cross axis we use the `align-items` property.
+- `justify-content: flex-start|center|flex-end|space-around|space-between|space-evenly`
+- `align-items: flex-start|center|flex-end|stretch|baseline`
+- `align-self` is applied to the child element, not the container. It allows us to change the alignment of a specific child along the cross axis.
+- `align-self` has all the same values as `align-items`.
+- Definitions:
+  - `justify` — to position something along the primary axis.
+  - `align` — to position something along the cross axis.
+  - `content` — a group of “stuff” that can be distributed.
+  - `items` — single items that can be positioned individually.
+- Box model illustration:
+  ![Box model illustration](https://web.dev/static/learn/css/box-model/image/a-diagram-showing-four-m-af72960a9e79a.svg)
+- `box-sizing: content-box` is the default, width and height apply only to the content.
+- In `box-sizing: border-box` width and height include the content, padding, and border.
+- To make an element sticky, you must pair `position: sticky`; with at least one threshold inset property, such as `top`, `bottom`, `left`, or `right`.
+
 ## Day 7 (Aug 21)
 
 Read about HTML forms and CSS Selectors.
@@ -49,10 +87,11 @@ Read about HTML forms and CSS Selectors.
   - `[href^='https']`: A href that starts with https
   - `[href$='.com']`: A href that ends with .com
 - Combinators:
-  - Descendant (`div p`): It targets any `<p>` inside the `<div>`.
-  - Child (`div > p`): `<p>` must sit exactly one level below the `<div>`.
-  - Subsequent sibling (`h1 ~ p`): Targets all `<p>` elements that follow the `<h1>`.
+  - Descendant (`div p`): It targets any `p` inside the `div`.
+  - Child (`div > p`): `<p>` must sit exactly one level below the `div`.
+  - Subsequent sibling (`h1 ~ p`): Targets all `p` elements that follow the `h1`.
   - Next sibling (`h1 + p`): Targets only the very next sibling.
+  - Comma Combinator (`h1, p`): Targets both `h1` and `p`.
 - Examples:
   - `.top * + *`: Any element inside `.top` that immediately follows another element.
   - `.top > * + *::before`: The `::before` of any direct child of `.top` that immediately follows another direct child.
@@ -104,8 +143,8 @@ Read about HTML: `<image>` and `<table>`.
 Read about HTML: lists and navigation (table of content and page breadcrumbs). \
 Finished the main section of [learngitbranching.js.org](https://learngitbranching.js.org/) tutorial.
 
-- `<menu>` tag acts as a semantic alternative to the `<ul>` tag.
-- Description list, i.e., `<dl>` tag:
+- `menu` tag acts as a semantic alternative to the `ul` tag.
+- Description list, i.e., `dl` tag:
 
   ```html
   <dl>
@@ -140,7 +179,7 @@ Read about HTML document structure, semantic tags, headings and links.
     <head>
       <meta charset="utf-8" />
       <title>Title</title>
-      <meta name="viewport" content="width=device-width" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
       <!-- Body -->
@@ -150,7 +189,7 @@ Read about HTML document structure, semantic tags, headings and links.
 
 - Favicon: `<link rel="icon" type="image/png" href="/images/favicon.png">`
 - [<script src="..." async/defer>](https://javascript.info/script-async-defer)
-- Some Semantic HTML Tags: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>` and `<footer>`.
+- Some Semantic HTML Tags: `header`, `nav`, `main`, `section`, `article`, `aside` and `footer`.
 
   ```html
   <body>
@@ -167,7 +206,7 @@ Read about HTML document structure, semantic tags, headings and links.
 
 - [`tabindex`](https://web.dev/learn/html/attributes#tabindex) and [`contenteditable`](https://web.dev/learn/html/attributes#contenteditable) attributes
 
-- `taget="_blank"` attribute on `<a>` tag open link in a new tab.
+- `taget="_blank"` attribute on `a` tag open link in a new tab.
 
 ## Day 3 (Aug 17)
 
