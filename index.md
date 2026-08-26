@@ -1,12 +1,58 @@
 # Progress tracker
 
+## Day 9 (Aug 25)
+
+Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/almanac/properties/p/position/) and [units](https://yurilee.hashnode.dev/css-units-are-confusing-af).
+
+- Psuedo-elements:
+  - `::before`: Adds something before the element's content.
+
+    ```css
+    .hello::before {
+      content: "👋 ";
+    }```
+  - `::after`: Adds something after the element's content.
+
+  - `::first-letter`: Styles the first letter of text.
+  - `::first-line`: Styles the first line of a paragraph.
+  - `::selection`: Controls how text looks when the user highlights it.
+- `!important` is a keyword flag used to force a specific style declaration to override any conflicting styles.
+- `:is()` and `:where()` are CSS pseudo-class function that lets you group multiple selectors without repeating the common part. \
+  For example:
+
+  ```css
+  h1:hover, h2:hover, h3:hover {
+    color: red;
+  }
+  ```
+  
+  Can be written as:
+
+  ```css
+  :is(h1, h2, h3):hover {
+    color: red;
+  }
+  ```
+
+- `:is()` keeps the specificity of its most specific argument while `:where()` always has zero specificity.
+- Units cheatsheet:
+  ![CSS Units](https://yurilee.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1626960364359%2FRITHUchJLk.png&w=3840&q=75)
+- `position` property can take the following values:
+  - `static`: Default. Element sticks to the normal page flow. `left`/`right`/`top`/`bottom`/`z-index` have no effect.
+  - `relative`: Same as `static` but the positional properties move the element from the original position in that direction.
+  - `absolute`: The element is removed from the flow of the document and other elements will behave as if it’s not even there. \
+  The positioning origin is the padding edge of its nearest positioned ancestor (an ancestor element whose position is anything other than `static`).
+  - `fixed`: The element is fixed to the viewport.
+  - `sticky`: The element is treated like a `relative` value until the scroll location of the viewport reaches a specified threshold, at which point the element takes a `fixed` position where it is told to stick.
+  - `inherit`: It inherits the positioning value from its parent.
+
 ## Day 8 (Aug 24)
 
 Finished the [CSS Diner](https://flukeout.github.io/) minigame.\
-Read about CSS: psuedo-selectors and flexbox. \
+Read about CSS: psuedo-classes and flexbox. \
 Re-read CSS layout, box model and sticky.
 
-- Psuedo-selectors:
+- Psuedo-classes:
   - `:first-child`: Select a first child element inside of another element.
   - `:only-child`: Select an element that are the only element inside of another one.
   - `:last-child`: Select the last element inside of another element.
@@ -34,8 +80,15 @@ Re-read CSS layout, box model and sticky.
   - `items` — single items that can be positioned individually.
 - Box model illustration:
   ![Box model illustration](https://web.dev/static/learn/css/box-model/image/a-diagram-showing-four-m-af72960a9e79a.svg)
-- `box-sizing: content-box` is the default, width and height apply only to the content.
-- In `box-sizing: border-box` width and height include the content, padding, and border.
+- `box-sizing: content-box` is the default, width and height apply only to the content. \
+  In `box-sizing: border-box` width and height include the content, padding, and border.
+  
+- To set the box sizing model to border-box for every element and every pseudo-element:
+  
+  ```css
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }```
 - To make an element sticky, you must pair `position: sticky`; with at least one threshold inset property, such as `top`, `bottom`, `left`, or `right`.
 
 ## Day 7 (Aug 21)
