@@ -1,5 +1,8 @@
 # Progress tracker
 
+Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
+[Resources page](resources.md)
+
 ## Day 9 (Aug 25)
 
 Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/almanac/properties/p/position/) and [units](https://yurilee.hashnode.dev/css-units-are-confusing-af).
@@ -10,9 +13,10 @@ Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/al
     ```css
     .hello::before {
       content: "👋 ";
-    }```
-  - `::after`: Adds something after the element's content.
+    }
+    ```
 
+  - `::after`: Adds something after the element's content.
   - `::first-letter`: Styles the first letter of text.
   - `::first-line`: Styles the first line of a paragraph.
   - `::selection`: Controls how text looks when the user highlights it.
