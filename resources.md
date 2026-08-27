@@ -1,5 +1,10 @@
 # Resources
 
+- [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [An Interactive Guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
+- [Flexbox Froggy](https://flexboxfroggy.com/)
+- [media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- [`display` property](https://css-tricks.com/almanac/properties/d/display/)
 - [`position` property](https://css-tricks.com/almanac/properties/p/position/)
 - [CSS units](https://yurilee.hashnode.dev/css-units-are-confusing-af)
 - [CSS Diner](https://flukeout.github.io/)

@@ -3,6 +3,17 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 10 (Aug 26)
+
+Read about the [`display` property](https://css-tricks.com/almanac/properties/d/display/) and [media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/). \
+Read the [An Interactive Guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/). \
+Finished the [Flexbox Froggy](https://flexboxfroggy.com/) game.
+
+- An `inline` element will accept `margin` and `padding` but it will only push other elements horizontally away, not vertically. It will ignore `height` and `width`.
+- `inline-block` will respect `height` and `width`.
+- Anatomy of a media query: ![Anatomy of a media query](https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/09/media-query-anatomy.jpg)
+- Flexbox Diagram: ![Flexbox Diagram](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
+
 ## Day 9 (Aug 25)
 
 Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/almanac/properties/p/position/) and [units](https://yurilee.hashnode.dev/css-units-are-confusing-af).
@@ -40,7 +51,7 @@ Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/al
 
 - `:is()` keeps the specificity of its most specific argument while `:where()` always has zero specificity.
 - Units cheatsheet:
-  ![CSS Units](https://yurilee.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1626960364359%2FRITHUchJLk.png&w=3840&q=75)
+  ![CSS Units](https://yurilee.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1626960364359%2FRITHUchJLk.png&w=3840&q=100)
 - `position` property can take the following values:
   - `static`: Default. Element sticks to the normal page flow. `left`/`right`/`top`/`bottom`/`z-index` have no effect.
   - `relative`: Same as `static` but the positional properties move the element from the original position in that direction.
