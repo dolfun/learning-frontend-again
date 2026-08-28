@@ -3,6 +3,53 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 11 (Aug 27)
+
+Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/overflow/), [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/),
+
+- `overflow: visible | hidden | scroll | auto | inherit`:
+  - `visible`: Default. Content is not clipped when it proceeds outside its box. Even though the content is visible outside of the box, that content does not affect the flow of the page.
+  - `hidden`: Overflowing content will be hidden and inaccessible.
+  - `scroll`: Overflowing content will be hidden and but accessible via scrolling.
+  - `auto`: The scrollbars will only show up if there is content that actually breaks out of the element.
+- Properties for flex container:
+  - `display: flex`: enables flexbox.
+  - `flex-direction: row | row-reverse | column | column-reverse`
+  - `flex-wrap: nowrap | wrap | wrap-reverse`
+  - `flex-flow: [flex-direction] [flex-wrap]`
+  - `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe`
+    - `justify-content` defines the alignment along the main axis.
+    - `safe` keeps the overflowing content accessible on the readable/scrollable side by changing an overflow alignment like `center` into a `start` alignment.
+    - `unsafe` strictly enforces your chosen alignment, which can push parts of the content completely off-screen into an unscrollable area.
+    ![justify-content illustration](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg)
+  - `align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe`
+    - `align-items` defines the default behavior for how flex items are laid out along the cross axis on the current line.
+    - `flex-start`: Flex container's cross-axis start
+    - `start`: Flex container's writing mode
+    - `self-start`: Individual flex own writing mode
+  ![align-items illustration](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg)
+  - `align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end + ... safe | unsafe`
+    - `align-content` aligns a flex container’s lines within when there is extra space in the cross-axis.
+    - This property only takes effect on multi-line flexible containers, where `flex-wrap` is set to either `wrap` or `wrap-reverse`.
+  ![align-content illustration](https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg)
+  - `gap`, `row-gap` and `column-gap`:
+    - `gap: [row and column gap]`
+    - `gap: [row gap] [column gap]`
+- Properties for flex items:
+  - `order`: It controls the order in which they appear in the flex container. \
+    Default is zero. \
+    Items with the same `order` revert to source order.
+  - `flex-grow`: Default is 1. It dictates what amount of the available space inside the flex container the item should take up as a proportion.
+  - `flex-shrink`: Similar to `flex-grow` but for the case of shrinking.
+  - `flex-basis`: It sets the initial size of a flex item along the main axis before the remaining space is distributed.
+  - `align-self`: This allows the default alignment (or the one specified by `align-items`) to be overridden for individual flex items.
+  - `flex: [grow] [shrink] [basis]`:
+    - `flex: initial` -> `flex: 0 1 auto`
+    - `flex: auto` -> `flex 1 1 auto`
+    - `flex: none` -> `flex 0 0 auto`
+    - `flex: 1` -> `flex 1 1 0%`
+    - `flex: 2 100px` -> `flex 2 1 100px`
+
 ## Day 10 (Aug 26)
 
 Read about the [`display` property](https://css-tricks.com/almanac/properties/d/display/) and [media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/). \
