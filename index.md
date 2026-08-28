@@ -146,7 +146,8 @@ Re-read CSS layout, box model and sticky.
   - `content` — a group of “stuff” that can be distributed.
   - `items` — single items that can be positioned individually.
 - Box model illustration:
-  ![Box model illustration](https://web.dev/static/learn/css/box-model/image/a-diagram-showing-four-m-af72960a9e79a.svg)
+  <!-- markdownlint-disable-next-line MD033 -->
+  <div style="text-align: center;"><img src="https://web.dev/static/learn/css/box-model/image/a-diagram-showing-four-m-af72960a9e79a.svg" alt="Box model illustration" width="80%"></div>
 - `box-sizing: content-box` is the default, width and height apply only to the content. \
   In `box-sizing: border-box` width and height include the content, padding, and border.
   
