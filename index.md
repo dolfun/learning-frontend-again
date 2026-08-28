@@ -21,17 +21,20 @@ Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/ove
     - `justify-content` defines the alignment along the main axis.
     - `safe` keeps the overflowing content accessible on the readable/scrollable side by changing an overflow alignment like `center` into a `start` alignment.
     - `unsafe` strictly enforces your chosen alignment, which can push parts of the content completely off-screen into an unscrollable area.
-    ![justify-content illustration](https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg)
+    <!-- markdownlint-disable-next-line MD033 -->
+    <div style="text-align: center;"><img src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg" alt="justify-content illustration" width="50%"></div>
   - `align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe`
     - `align-items` defines the default behavior for how flex items are laid out along the cross axis on the current line.
     - `flex-start`: Flex container's cross-axis start
     - `start`: Flex container's writing mode
     - `self-start`: Individual flex own writing mode
-  ![align-items illustration](https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg)
+    <!-- markdownlint-disable-next-line MD033 -->
+      <div style="text-align: center;"><img src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg" alt="align-items illustration" width="50%"></div>
   - `align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end + ... safe | unsafe`
     - `align-content` aligns a flex container’s lines within when there is extra space in the cross-axis.
     - This property only takes effect on multi-line flexible containers, where `flex-wrap` is set to either `wrap` or `wrap-reverse`.
-  ![align-content illustration](https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg)
+      <!-- markdownlint-disable-next-line MD033 -->
+      <div style="text-align: center;"><img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="align-content illustration" width="50%"></div>
   - `gap`, `row-gap` and `column-gap`:
     - `gap: [row and column gap]`
     - `gap: [row gap] [column gap]`
@@ -59,7 +62,9 @@ Finished the [Flexbox Froggy](https://flexboxfroggy.com/) game.
 - An `inline` element will accept `margin` and `padding` but it will only push other elements horizontally away, not vertically. It will ignore `height` and `width`.
 - `inline-block` will respect `height` and `width`.
 - Anatomy of a media query: ![Anatomy of a media query](https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/09/media-query-anatomy.jpg)
-- Flexbox Diagram: ![Flexbox Diagram](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
+- Flexbox Diagram:
+  <!-- markdownlint-disable-next-line MD033 -->
+  <div style="text-align: center;"><img src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg" alt="Flexbox Diagram" width="80%"></div>
 
 ## Day 9 (Aug 25)
 
