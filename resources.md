@@ -1,5 +1,8 @@
 # Resources
 
+- [A Complete CSS Grid Layout Guide](https://css-tricks.com/complete-guide-css-grid-layout/)
+- [An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)
+- [Use Cases For Flexbox](https://www.smashingmagazine.com/2018/10/flexbox-use-cases/)
 - [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [An Interactive Guide to Flexbox](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/)
 - [Flexbox Froggy](https://flexboxfroggy.com/)

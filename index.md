@@ -3,6 +3,49 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 12 (Aug 28)
+
+Read [Use Cases For Flexbox](https://www.smashingmagazine.com/2018/10/flexbox-use-cases/), [An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) and [A Complete CSS Grid Layout Guide](https://css-tricks.com/complete-guide-css-grid-layout/). \
+Read about CSS variables and grid.
+
+- Enabled with `display: grid`
+- `grid-template-columns` property is used to specify width and number of columns.
+- The `fr` unit is availabe to use with grids, it stands for fraction.
+- Percentage-based columns are rigid while `fr`-based columns are flexible, it distrubutes the extra space.
+- `gap` property adds a fixed amount of space between all of the columns and rows.
+- By defining both `grid-template-rows` and `grid-template-columns` one can create an explicit grid.
+- `repeat` function: `grid-template-columns: repeat(7, 1fr)`
+- `grid-row: <grid-row-start> / <grid-row-end>`, similarly `grid-column` exists. \
+  The numbers provided are line indices, not cell indices. \
+  Negative numbers are also allowed.
+- `grid-column: span n`
+- `grid-template-area` and `grid-area`:
+  
+  ```css
+  .parent {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      'sidebar header'
+      'sidebar main';
+  }
+  .child {
+    grid-area: main;
+  }
+  ```
+
+- `justify-content: [start|center|end|space-between|space-around|space-evenly]`: It controls the distribution of columns
+- `justify-items: stretch|start|center|end`: It aligns the items within their columns.
+- While `justify-items` is set on the grid parent, `justify-self` is set on the child.
+- `align-content` is like `justify-content` and `align-items` is like `justify-items` but they affects rows instead of columns.
+- `place-content: center` is shorthand for:
+
+  ```css
+  justify-content: center;
+  align-content: center;
+  ```
+
 ## Day 11 (Aug 27)
 
 Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/overflow/), [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/),
