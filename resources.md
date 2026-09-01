@@ -1,5 +1,7 @@
 # Resources
 
+- [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)
+- [The Modern JavaScript Tutorial](https://javascript.info/)
 - [A Complete CSS Grid Layout Guide](https://css-tricks.com/complete-guide-css-grid-layout/)
 - [An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)
 - [Use Cases For Flexbox](https://www.smashingmagazine.com/2018/10/flexbox-use-cases/)

@@ -3,6 +3,47 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 13 (Aug 31)
+
+Started reading [javascript.info](https://javascript.info/). \
+Read about [Javascript fundamentals](https://javascript.info/first-steps): [Variables](https://javascript.info/variables), [Data Types](https://javascript.info/types), [Type Conversions](https://javascript.info/type-conversions) and [Basic Operators, Maths](https://javascript.info/operators).
+
+- the dollar sign `$` can also be used in variable names.
+- `NaN ** 0` is `1` (🤔, shouldn't have been?, [discussion](https://stackoverflow.com/questions/17863619/why-does-nan0-1), [wiki](https://en.wikipedia.org/wiki/NaN#Function_definition), [article](https://grouper.ieee.org/groups/msc/ANSI_IEEE-Std-754-2019/background/power.txt))
+- Primitive types: `Number`, `BigInt`, `String`, `Boolean`, `null`, `undefined` and `Symbol`.
+- The `typeof` operator returns the type of the operand.
+- `typeof null` is `"object"` and `typeof alert` is `"function"`
+- **String conversion**: `String(value)`
+- **Numeric conversion**: `Number(value)` \
+  `undefined` becomes `NaN` and `null` becomes `0`.
+- **Boolean conversion**: `Boolean(value)` \
+  `0`, `""`, `null`, `undefined` and `NaN` becomes `false`, other values become `true`.
+- Binary `+` operator concatenates strings:
+
+  ```js
+  "my" + "string" === "mystring"
+  "1" + 2 === "12"
+  2 + "1" === "21"
+  2 + 2 + "1" === "41"
+  "1" + 2 + 2 === "122"
+  6 - "2" === 4
+  "6" / "2" === 3
+  ```
+
+- Unary `+x` is equivalent to `Number(x)`.
+- [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)
+- Assignment `=` is an operator and it returns a value.
+- We can chain assignments: `a = b = c = 1;`
+- **Bitwise operators**: Bitwise operators treat arguments as 32-bit integer numbers.
+The list of operators:
+- AND: `&`
+- OR: `|`
+- XOR: `^`
+- NOT: `~`
+- LEFT SHIFT: `<<`
+- SIGNED RIGHT SHIFT: `>>`
+- UNSIGNED RIGHT SHIFT: `>>>`
+
 ## Day 12 (Aug 28)
 
 Read [Use Cases For Flexbox](https://www.smashingmagazine.com/2018/10/flexbox-use-cases/), [An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/) and [A Complete CSS Grid Layout Guide](https://css-tricks.com/complete-guide-css-grid-layout/). \
