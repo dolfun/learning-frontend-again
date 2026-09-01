@@ -3,6 +3,53 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 14 (Sep 1)
+
+Read about [Javascript fundamentals](https://javascript.info/first-steps): [Comparisons](http://javascript.info/comparison), [Conditional branching: if, '?'](https://javascript.info/ifelse), [Logical operators](https://javascript.info/logical-operators), [Nullish coalescing operator '??'](https://javascript.info/nullish-coalescing-operator), [Loops: while and for](https://javascript.info/while-for), [The "switch" statement](https://javascript.info/switch), [Functions](https://javascript.info/function-basics), [Function expressions](https://javascript.info/function-expressions) and [Arrow functions, the basics](https://javascript.info/arrow-functions-basics). \
+Also read about [Objects: the basics](https://javascript.info/object-basics): [Objects](https://javascript.info/object) and [Object references and copying](https://javascript.info/object-copy).
+
+- String comparison is done lexicographically.
+- When comparing values of different types, JavaScript converts the values to numbers.
+- The strict equality operator `===` and the strict non-equality operator `!==` checks the equality without type conversion.
+- The values `null` and `undefined` are equal `==` to themselves and each other, but do not equal any other value.
+- The `if (…)` statement evaluates the expression in its parentheses and converts the result to a boolean.
+- OR `||` finds the first truthy value from left to right. If none was found, then it returns the last value.
+- AND `&&` finds the first falsy value.
+- A double NOT `!!` is sometimes used for converting a value to boolean type.
+- The nullish coalescing operator `??` returns the first argument if it’s not `null`/`undefined`. Otherwise, the second one.
+- `!!=` operator assign if the current value is null or undefined. `||=` and `&&=` work similarly.
+- [Labels for break/continue](https://chatgpt.com/s/t_6a96a620e8cc8191bfb055be37e5c6d3)
+- `switch` statement uses strict eqality check.
+- If a function is called, but an argument is not provided, then the corresponding value becomes `undefined`.
+- A Function Expression is created when the execution reaches it and is usable only from that moment but a Function Declaration can be called earlier than it is defined.
+- The `delete` keyword can be used to remove a property from an object.
+- Computed properties:
+
+  ```js
+  const key = "name";
+
+  const user = {
+    [key]: "John"
+  };
+  ```
+
+- Property value shorthand:
+
+  ```js
+    let user = {
+      name,  // same as name:name
+      age: 30
+    };
+  ```
+
+- Property names can be any strings or symbols, there is no limitation. (except `__proto__`)
+- Reading a non-existing property just returns `undefined`.
+- `in` operator: `"key" in object` \
+  In most cases comparison with `undefined` works fine, but it fails when an object property exists, but stores `undefined`.
+- To walk over all keys of an object we can use the `for..in` loop: `for (key in object) {...}`
+- [`Object.assign`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#syntax): Can do shallow cloning
+- [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone#description): Can perform deep cloning but methods are not supported.
+
 ## Day 13 (Aug 31)
 
 Started reading [javascript.info](https://javascript.info/). \
