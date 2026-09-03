@@ -3,6 +3,43 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 16 (Sep 3)
+
+Read [Object to primitive conversion](https://javascript.info/object-toprimitive), [Methods of primitives](https://javascript.info/primitives-methods), [Numbers](https://javascript.info/number), [Strings](https://javascript.info/string), [Arrays](https://javascript.info/array)
+
+- `num.toString(base)` returns a string representation of `num` in the numeral system with the given `base`. For example: `123456..toString(36)`
+- `Math.floor`, `Math.ceil`, `Math.round`, `Math.trunc`
+- `.toFixed(n)` rounds the number to `n` digits and returns a string.
+- `isNan` tests for `NaN`.
+- `isFinite` returns `false` when the argument is one of `NaN`, `Infinity` or `-Infinity`, otherwise it returns `true`
+- `Number.isNaN(value)` and `Number.isFinite(value)` also check if the argument belong to the number type.
+- `NaN === NaN` is `false` but `Object.is(NaN, NaN)` is `true`. \
+  `+0 === -0` is `true` but `Object.is(0, -0)` is `false`. \
+  For all other cases `Object.is` behaves the same as `===`.
+- `parseInt`/`parseFloat` "read" a number from a string until they cannot.
+- `Math.random()` returns a random number in $[0, 1]$
+- `Math.max(a, b, c...)` and `Math.min(a, b, c...)`
+- `Math.pow(n, power)`
+- `str.at(pos)` method alows negative position.
+- Strings are immutable.
+- `str.toUpperCase()` and `str.toLowerCase()`
+- `str.indexOf(substr, pos)`: Returns the index of `substr` in `str` or `-1` if not found.
+- `str.lastIndexOf(substr, pos)`
+- `str.includes(substr, pos)` returns `true`/`false` depending on whether `str` contains `substr` within.
+- `str.startsWith`, `str.endsWith`
+- Substring:
+  - `str.slice(start [, end])`: Negative indices are allowed.
+  - `str.substring(start [, end])`: `start` can be greater than `end`
+  - `str.substr(start [, length])`
+- `str.codePointAt(pos)` and `String.fromCodePoint(code)`
+- Array declaration:
+
+  ```js
+  let arr = new Array();
+  let arr = [];
+  ```
+
+
 ## Day 15 (Sep 2)
 
 Read about [Debugging in the browser](https://javascript.info/debugging-chrome), [Polyfills and Transpilers](https://javascript.info/polyfills), [Garbage Collection](https://javascript.info/garbage-collection), [Constructor, operator "new"](https://javascript.info/constructor-new#constructor-mode-test-new-target), [Optional chaining '?.'](https://javascript.info/optional-chaining) and [Symbol type](https://javascript.info/symbol).
