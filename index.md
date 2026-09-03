@@ -3,6 +3,37 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 15 (Sep 2)
+
+Read about [Debugging in the browser](https://javascript.info/debugging-chrome), [Polyfills and Transpilers](https://javascript.info/polyfills), [Garbage Collection](https://javascript.info/garbage-collection), [Constructor, operator "new"](https://javascript.info/constructor-new#constructor-mode-test-new-target), [Optional chaining '?.'](https://javascript.info/optional-chaining) and [Symbol type](https://javascript.info/symbol).
+
+- `this` is not bound and arrow functions have no `this`.
+- Constructor and `new` operator:
+  
+  ```js
+  function User(name) {
+    this.name = name;
+    this.isAdmin = false;
+  }
+
+  let user = new User("Jack");
+  ```
+
+- `new.target` is a special property which is undefined for regular calls and equals the function if called with `new`.
+- Return from constructors:
+  - If `return` is called with an object, then the object is returned instead of `this`.
+  - If `return` is called with a primitive, it’s ignored.
+- The optional chaining `?.` stops the evaluation if the value before `?.` is `undefined` or `null` and returns `undefined`.
+- `?.()` is used to call a function that may not exist.
+- `object?.[key]` is also possible.
+- Also we can use `?.` with `delete`.
+- Symbol: `let id = Symbol("id");`
+- To show a symbol, call `.toString()`, to obtain it's description, use the `.description` property.
+- Symbolic properties do not participate in `for..in` loop. `Object.keys(user)` also ignores them. But `Object.assign` copies both string and symbol properties.
+- Global symbols:
+  - `Symbol.for(key)`: Returns a symbol by name (creates one if absent).
+  - `Symbol.keyFor(sym)`: Returns a name by global symbol.
+
 ## Day 14 (Sep 1)
 
 Read about [Javascript fundamentals](https://javascript.info/first-steps): [Comparisons](http://javascript.info/comparison), [Conditional branching: if, '?'](https://javascript.info/ifelse), [Logical operators](https://javascript.info/logical-operators), [Nullish coalescing operator '??'](https://javascript.info/nullish-coalescing-operator), [Loops: while and for](https://javascript.info/while-for), [The "switch" statement](https://javascript.info/switch), [Functions](https://javascript.info/function-basics), [Function expressions](https://javascript.info/function-expressions) and [Arrow functions, the basics](https://javascript.info/arrow-functions-basics). \
@@ -136,7 +167,7 @@ Read about CSS variables and grid.
 
 ## Day 11 (Aug 27)
 
-Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/overflow/), [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/),
+Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/overflow/) and [A Complete CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 - `overflow: visible | hidden | scroll | auto | inherit`:
   - `visible`: Default. Content is not clipped when it proceeds outside its box. Even though the content is visible outside of the box, that content does not affect the flow of the page.
