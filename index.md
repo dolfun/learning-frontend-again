@@ -5,7 +5,7 @@ Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://ww
 
 ## Day 16 (Sep 3)
 
-Read [Object to primitive conversion](https://javascript.info/object-toprimitive), [Methods of primitives](https://javascript.info/primitives-methods), [Numbers](https://javascript.info/number), [Strings](https://javascript.info/string), [Arrays](https://javascript.info/array)
+Read [Object to primitive conversion](https://javascript.info/object-toprimitive), [Methods of primitives](https://javascript.info/primitives-methods), [Numbers](https://javascript.info/number), [Strings](https://javascript.info/string), [Arrays](https://javascript.info/array) and [Array methods](https://javascript.info/array-methods).
 
 - `num.toString(base)` returns a string representation of `num` in the numeral system with the given `base`. For example: `123456..toString(36)`
 - `Math.floor`, `Math.ceil`, `Math.round`, `Math.trunc`
@@ -35,10 +35,57 @@ Read [Object to primitive conversion](https://javascript.info/object-toprimitive
 - Array declaration:
 
   ```js
-  let arr = new Array();
-  let arr = [];
+  const arr = new Array(n);
+  const arr = [];
   ```
 
+- `arr.at(i)` allow negative indices.
+- Array methods:
+  - `pop()`: Extracts the last element of the array and returns it.
+  - `push(...items)`: Append the element to the end of the array.
+  - `shift()`: Extracts the first element of the array and returns it.
+  - `unshift(...items)`: Add the element to the beginning of the array.
+  - Methods `push` and `unshift` can add multiple elements at once.
+  - Methods `push`/`pop` run fast, while `shift`/`unshift` are slow.
+  - `arr.splice(start[, deleteCount, elem1, ..., elemN])`: From index `start` remove `deleteCount` elements and insert `elem1, ..., elemN` at their place. \
+    It returns the array of removed elements. \
+    Negative indices are allowed.
+  - `arr.slice([start], [end])`: It returns a new array copying to it all items from index `start` to `end` (not including `end`). \
+    Negative indices are allowed.
+  - `arr.concat(arg1, arg2...)`: It accepts either arrays or values. \
+    If an object has `Symbol.isConcatSpreadable` property then it is treated as an array by `concat`.
+  - `arr.forEach((item, index, array) => {...})`
+  - `arr.indexOf(item, from)`, `arr.lastIndexOf(item, from)` and `arr.includes(item, from)`.
+  - `arr.indexOf` uses `===` equality check, while `arr.includes` uses `SameValueZero`.
+  - `arr.find((item, index, array) => {...})`: If the function returns `true`, the search is stopped, the `item` is returned.
+  - `arr.findIndex` and `arr.FindLastIndex` have the same syntax but they return the index of the element.
+  - `arr.filter((item, index, array) => {...})`
+  - `arr.map((item, index, array) => {...})`
+  - Sorting: `arr.sort(fn)` \
+    The comparison function can return a positive number to say greater and a negative number to say lesser. `[4, 3, 1].sort((a, b) => a - b)`
+  - `arr.reverse()`
+  - `str.split(delim)`: It splits the string into an array by the given delimiter `delim`.
+  - `arr.join(glue)`: It creates a string of `arr` items joined by `glue` between them.
+  - `arr.reduce` and `arr.reduceRight`:
+
+    ```js
+    let value = arr.reduce(function(acc, item, index, array) {
+      // ...
+    }, [initial]);
+    ```
+
+    For example: `[1, 2, 3].reduce((sum, current) => sum + current, 0);` \
+    If `initial` is not provided, then it takes the first element as initial value.
+  - `arr.some(fn)` and `arr.every(fn)`
+  - `arr.fill(value, start, end)`
+  - `arr.copyWithin(target, start, end)` – copies its elements from position `start` till position `end` into itself, at position `target` (overwrites existing).
+  - `arr.flat(depth)`/`arr.flatMap(fn)` create a new flat array from a multidimensional array.
+
+- Use `for..of` loops for arrays.
+- The `length` property is writable.
+- Array's `toString` method returns a comman-separated list of its element.
+- `Array.isArray` to check if an object is an array.
+- Almost all array methods that call functions – like `find`, `filter`, `map`, with a notable exception of `sort`, accept an optional additional parameter `thisArg`.
 
 ## Day 15 (Sep 2)
 
