@@ -3,6 +3,95 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 17 (Sep 4)
+
+Read about [Iterables](https://javascript.info/iterable), [Map and Set](https://javascript.info/map-set)
+
+- Iterable example:
+
+  ```js
+  const range = {
+    from: 1,
+    to: 5,
+
+    [Symbol.iterator]() {
+      return {
+        current: this.from,
+        last: this.to,
+
+        next() {
+          if (this.current <= this.last) {
+            return {
+              done: false,
+              value: this.current++
+            };
+          }
+
+          return { done: true };
+        }
+      };
+    }
+  };
+  ```
+
+  or a shorter version:
+
+  ```js
+  let range = {
+    from: 1,
+    to: 5,
+
+    [Symbol.iterator]() {
+      this.current = this.from;
+      return this;
+    },
+
+    next() {
+      if (this.current <= this.to) {
+        return { done: false, value: this.current++ };
+      } else {
+        return { done: true };
+      }
+    }
+  };
+  ```
+
+- To be considered array-like, an object must fulfill two specific rules:
+  1. It must have a non-negative `length` property.
+  2. It must have indexed elements starting from `0` up to `length - 1`.
+- `Array.from(obj[, mapFn, thisArg])` takes an iterable or an array-like and returns an `Array` object from it.
+- `Map`:
+  - `new Map()`
+  - `map.set(key, value)`: returns the map itself
+  - `map.get(key)`: returns `undefined` if `key` doesn't exist
+  - `map.has(key)`
+  - `map.delete(key)`
+  - `map.clear()`
+  - It uses `SameValueZero` for comparison.
+  - `map.keys()`, `map.values()`, `map.entries()` all return iterables.
+  - `Map` preserves insertion order.
+  - `map.forEach(value, key, map)`
+  - Map initialization:
+  
+    ```js
+    const map = new Map([
+      ["a", 1], ["b", 2], ["c", 3]
+    ]);
+    ```
+
+  - `Object.entries(obj)`: Map from Object
+  - `Object.fromEntries([[key, value], ...])`: Object from array of [`key`, `value`] pairs
+  - `map.entries()` returns an iterable of key/value pairs
+- `Set`:
+  - `new Set([iterable])`
+  - `set.add(value)`: returns the set itself
+  - `set.delete(value)`: returns whether the value existed when deleting
+  - `set.has(value)`
+  - `set.clear()`
+  - `set.size`
+  - We can loop over a set either with `for..of` or using `forEach`: `set.forEach((value, valueAgain, set) => {...})`
+  - `set.keys()`, `set.values()` (same as `set.keys()`) and `set.entries()`(`[value, value]` pair)
+
 ## Day 16 (Sep 3)
 
 Read [Object to primitive conversion](https://javascript.info/object-toprimitive), [Methods of primitives](https://javascript.info/primitives-methods), [Numbers](https://javascript.info/number), [Strings](https://javascript.info/string), [Arrays](https://javascript.info/array) and [Array methods](https://javascript.info/array-methods).
@@ -17,7 +106,7 @@ Read [Object to primitive conversion](https://javascript.info/object-toprimitive
   `+0 === -0` is `true` but `Object.is(0, -0)` is `false`. \
   For all other cases `Object.is` behaves the same as `===`.
 - `parseInt`/`parseFloat` "read" a number from a string until they cannot.
-- `Math.random()` returns a random number in $[0, 1]$
+- `Math.random()` returns a random number in $[0, 1)$
 - `Math.max(a, b, c...)` and `Math.min(a, b, c...)`
 - `Math.pow(n, power)`
 - `str.at(pos)` method alows negative position.
@@ -58,7 +147,7 @@ Read [Object to primitive conversion](https://javascript.info/object-toprimitive
   - `arr.indexOf(item, from)`, `arr.lastIndexOf(item, from)` and `arr.includes(item, from)`.
   - `arr.indexOf` uses `===` equality check, while `arr.includes` uses `SameValueZero`.
   - `arr.find((item, index, array) => {...})`: If the function returns `true`, the search is stopped, the `item` is returned.
-  - `arr.findIndex` and `arr.FindLastIndex` have the same syntax but they return the index of the element.
+  - `arr.findIndex` and `arr.findLastIndex` have the same syntax but they return the index of the element.
   - `arr.filter((item, index, array) => {...})`
   - `arr.map((item, index, array) => {...})`
   - Sorting: `arr.sort(fn)` \
@@ -288,7 +377,7 @@ Read about [`overflow` property](https://css-tricks.com/almanac/properties/o/ove
   - `order`: It controls the order in which they appear in the flex container. \
     Default is zero. \
     Items with the same `order` revert to source order.
-  - `flex-grow`: Default is 1. It dictates what amount of the available space inside the flex container the item should take up as a proportion.
+  - `flex-grow`: Default is 0. It dictates what amount of the available space inside the flex container the item should take up as a proportion.
   - `flex-shrink`: Similar to `flex-grow` but for the case of shrinking.
   - `flex-basis`: It sets the initial size of a flex item along the main axis before the remaining space is distributed.
   - `align-self`: This allows the default alignment (or the one specified by `align-items`) to be overridden for individual flex items.
