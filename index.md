@@ -3,9 +3,68 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 18 (Sep 7)
+
+Read about [WeakMap and WeakSet](https://javascript.info/weakmap-weakset), [Object.keys, values, entries](https://javascript.info/keys-values-entries), [Destructuring assignment](https://javascript.info/destructuring-assignment), [Date and time](https://javascript.info/date), [JSON methods, toJSON](https://javascript.info/json), [Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread) and [Variable scope, closure](https://javascript.info/closure).
+
+- `WeakMap`:
+  - `WeakMap` keys must be objects
+  - `weakMap.set(key, value)`
+  - `weakMap.get(key)`
+  - `weakMap.delete(key)`
+  - `weakMap.has(key)`
+  - Use case: caching
+- `Object.keys(obj)`: returns an array of keys.
+- `Object.values(obj)`: returns an array of values.
+- `Object.entries(obj)`: returns an array of `[key, value]` pairs.
+- `map.keys()` returns an iterable, while `Object.keys(obj)` returns an array.
+- `Object.keys/values/entries` ignore symbolic properties.
+- Destructuring:
+  - `const [a, b] = [1, 2]`
+  - `const [a, , c] = "abc";`
+  - `for (const [key, value] of Object.entries(user)) {...}`
+  - `[a, b] = [b, a]`
+  - `const [a, b, ...c] = [1, 2, 3, 4, 5]`
+  - Absent values are considered `undefined`.
+  - `const [a = 1, b = 2] = [3]`
+  - `const { var1, var2 } = { var1:..., var2:... }` \
+    The order does not matter.
+  - `const {prop : varName = defaultValue, ...rest} = object`
+  - `const { height: a, width: b, title } = { title: "Menu", height: 10, width: 20 }`
+  - `const { title, ...rest } = options`
+  - `({a, b} = {a: 1, b: 2})`
+  - `function({ incomingProperty: varName = defaultValue, ... } = {})`
+- `Date`:
+  - `new Date()`: current
+  - `new Date(milliseconds)`: milliseconds passed after Jan 1st of 1970 UTC+0
+  - `new Date("07-09-20")`
+  - `new Date(year, month, date, hours, minutes, seconds, ms)`: Only first two arguments are required.
+  - `Date.now()` returns the current timestamp.
+  - `Date.parse(str)` reads a date from a string.
+- For JSON, property names must be in quotes and all quotes must be double quotes.
+- `JSON.stringify(value[, replacer, space])`:
+  - It supports objects, arrays, stings, numbers, boolean and null.
+  - There must be no circular references.
+  - `replacer`: Array of properties to encode or a mapping function `function(key, value)`.
+  - One can provide a `toJSON` method to override conversion via `JSON.stringify`.
+- `JSON.parse(str[, reviver])`.
+- Rest parameters:
+
+  ```js
+  function sum(...args) {
+    return args.reduce((acc, val) => acc + val, 0);
+  }
+  ```
+
+- `arguments` array-like and iterable object is a built-in, local variable, avalable inside all non-arrow functions.
+- Spread syntax:
+  - `Math.max(1, ...arr1, 2, ...arr2, 25)`
+  - `const merged = [0, ...arr, 2, ...arr2]`
+  - `Array.from` operates on both array-likes and iterables, but the spread syntax works only with iterables.
+
 ## Day 17 (Sep 4)
 
-Read about [Iterables](https://javascript.info/iterable), [Map and Set](https://javascript.info/map-set)
+Read about [Iterables](https://javascript.info/iterable) and [Map and Set](https://javascript.info/map-set).
 
 - Iterable example:
 
@@ -37,7 +96,7 @@ Read about [Iterables](https://javascript.info/iterable), [Map and Set](https://
   or a shorter version:
 
   ```js
-  let range = {
+  const range = {
     from: 1,
     to: 5,
 
@@ -106,7 +165,7 @@ Read [Object to primitive conversion](https://javascript.info/object-toprimitive
   `+0 === -0` is `true` but `Object.is(0, -0)` is `false`. \
   For all other cases `Object.is` behaves the same as `===`.
 - `parseInt`/`parseFloat` "read" a number from a string until they cannot.
-- `Math.random()` returns a random number in $[0, 1)$
+- `Math.random()` returns a random number in `[0, 1)`
 - `Math.max(a, b, c...)` and `Math.min(a, b, c...)`
 - `Math.pow(n, power)`
 - `str.at(pos)` method alows negative position.
