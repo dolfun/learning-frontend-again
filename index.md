@@ -3,6 +3,23 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 19 (Sep 8)
+
+Read about [The old "var"](https://javascript.info/var), [Global object](https://javascript.info/global-object), [Function object, NFE](https://javascript.info/function-object), [The "new Function" syntax](https://javascript.info/new-function), [Scheduling: setTimeout and setInterval](https://javascript.info/settimeout-setinterval), [Decorators and forwarding, call/apply](https://javascript.info/call-apply-decorators), [Function binding](https://javascript.info/bind), and [Arrow functions revisited](https://javascript.info/arrow-functions).
+
+- [Global Object Summary](https://javascript.info/global-object#summary)
+- A function’s name is accessible as the `name` property and the number of parameters is accessible via the `length` property (but rest parameters are not counted). We can also add properties of our own.
+- Named function expression: `const func = function namedFunc() {...}` \
+  It allows the function to reference itself and it is not visible outside.
+- "new Function" syntax: `const func = new Function ([arg1, arg2, ...argN], functionBody)` \
+  For example: \
+  `const sum = new Function('a', 'b', 'return a + b')` \
+  It's lexical environment is the global one.
+- `let id = setTimeout|setInterval(func|code, [delay], [arg1], [arg2], ...)`
+- `func.call(context, arg1, arg2, ...)` and `func.apply(context, args)` (args must be array-like)
+- `func.bind(context, [arg1], [arg2], ...)`: A function cannot be re-bound.
+- The arrow function doesn't have `this` and `arguments` in the current lexical environment.
+
 ## Day 18 (Sep 7)
 
 Read about [WeakMap and WeakSet](https://javascript.info/weakmap-weakset), [Object.keys, values, entries](https://javascript.info/keys-values-entries), [Destructuring assignment](https://javascript.info/destructuring-assignment), [Date and time](https://javascript.info/date), [JSON methods, toJSON](https://javascript.info/json), [Rest parameters and spread syntax](https://javascript.info/rest-parameters-spread) and [Variable scope, closure](https://javascript.info/closure).
