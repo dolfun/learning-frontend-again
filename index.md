@@ -3,6 +3,69 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 20 (Sep 9)
+
+Read about [Property flags and descriptors](https://javascript.info/property-descriptors), [Property getters and setters](https://javascript.info/property-accessors), [Prototypal inheritance](https://javascript.info/prototype-inheritance), [F.prototype](https://javascript.info/function-prototype), [Native prototypes](https://javascript.info/native-prototypes) and [Prototype methods, objects without __proto__](https://javascript.info/prototype-methods).
+
+- Property flags: `writable`, `enumerable` and `configurable`
+- `const descriptor = Object.getOwnPropertyDescriptor(obj, propertyName)`
+- `Object.defineProperty(obj, propertyName, descriptor)`:
+  - If a flag is not supplied, it is assumed `false`
+  - We can change writable from `true` to `false` for a non-configurable property, but not the other way around
+- `Object.defineProperties( obj, {prop1: descriptor1, prop2: descriptor2,  ... })`
+- `Object.getOwnPropertyDescriptors(obj)`: returns all property descriptors, including symbolic and non-enumerable properties.
+- `const clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj))`
+- Getter and setter:
+  
+  ```js
+  let const = {
+    get propName() {
+      // executed on obj.propName
+    },
+
+    set propName(value) {
+      // executed on obj.propName = value
+    }
+  };
+  ```
+
+- For the accessor properties, it's descriptor has: `get`, `set`, `enumerable` and `configurable`.
+- `__proto__` is a getter/setter for `[[Prototype]]`\
+  The `__proto__` reference cannot be cycling and it can only be either an object or `null`.
+- The prototype is only used for reading properties, write/delete operations work directly with the object. \
+  Accessor properties are an exception, as assignment is handled by a setter function.
+- `this` is not affected by prototypes at all, it is always the object before the dot.
+- The `for..in` loop iterates over inherited properties too.
+- `obj.hasOwnProperty(key)`: Checks if `obj` has its own (not inherited) property named `key`.
+- When calling `new F()`, if `F.prototype` is an object, then the `new` operator uses it to set `[[Prototype]]` for the new object.
+- The default `prototype` is an object with the only property `constructor` that points back to the function itself. \
+  So for `function F() {}`, `F.prototype = { constructor: F }` exists by default.
+- `obj.__proto__ === Object.prototype`, `arr.__proto__ === Array.prototype`, etc.
+- Method borrowing:
+  
+  ```js
+  function hash() {
+    return [].join.call(arguments);
+  }
+  ```
+
+  ```js
+  const obj = {
+    0: "Hello",
+    1: "world!",
+    length: 2,
+  };
+
+  obj.join = Array.prototype.join;
+  console.log(obj.join(",")); // Hello,world!
+  ```
+
+- The modern methods to get/set a prototype are `Object.getPrototypeOf(obj)` and `Object.setPrototypeOf(obj, proto)`.
+- `Object.create(proto[, descriptors])`: creates an empty object with given proto as `[[Prototype]]` and optional property descriptors
+- Cloning an object: \
+  `const clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj))`
+- Prototype-less objects: `obj = Object.create(null)` or `obj = { __proto__: null }`
+
 ## Day 19 (Sep 8)
 
 Read about [The old "var"](https://javascript.info/var), [Global object](https://javascript.info/global-object), [Function object, NFE](https://javascript.info/function-object), [The "new Function" syntax](https://javascript.info/new-function), [Scheduling: setTimeout and setInterval](https://javascript.info/settimeout-setinterval), [Decorators and forwarding, call/apply](https://javascript.info/call-apply-decorators), [Function binding](https://javascript.info/bind), and [Arrow functions revisited](https://javascript.info/arrow-functions).
@@ -340,10 +403,10 @@ Read about [Javascript fundamentals](https://javascript.info/first-steps): [Vari
 - Primitive types: `Number`, `BigInt`, `String`, `Boolean`, `null`, `undefined` and `Symbol`.
 - The `typeof` operator returns the type of the operand.
 - `typeof null` is `"object"` and `typeof alert` is `"function"`
-- **String conversion**: `String(value)`
-- **Numeric conversion**: `Number(value)` \
+- String conversion: `String(value)`
+- Numeric conversion: `Number(value)` \
   `undefined` becomes `NaN` and `null` becomes `0`.
-- **Boolean conversion**: `Boolean(value)` \
+- Boolean conversion: `Boolean(value)` \
   `0`, `""`, `null`, `undefined` and `NaN` becomes `false`, other values become `true`.
 - Binary `+` operator concatenates strings:
 
@@ -361,7 +424,7 @@ Read about [Javascript fundamentals](https://javascript.info/first-steps): [Vari
 - [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)
 - Assignment `=` is an operator and it returns a value.
 - We can chain assignments: `a = b = c = 1;`
-- **Bitwise operators**: Bitwise operators treat arguments as 32-bit integer numbers.
+- Bitwise operators: Bitwise operators treat arguments as 32-bit integer numbers.
 The list of operators:
 - AND: `&`
 - OR: `|`
@@ -542,7 +605,7 @@ Re-read CSS layout, box model and sticky.
   - `:only-of-type`: Select elements that are the only ones of their type within of their parent element
   - `:last-of-type`: Select the last element of a specific type.
   - `:empty`: Select elements that don't have children.
-- **Negation Pseudo-class**: `:not(X)`
+- Negation Pseudo-class: `:not(X)`
 
 - Flexbox is enabled with `display: flex`
 - `flex-direction: row|column` determines the primary and cross axis.
@@ -806,12 +869,12 @@ Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git c
 ### `.gitignore`
 
 - [Git Ignore Patterns](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
-- **Ignoring a previously committed file**:
+- Ignoring a previously committed file:
     1. `echo debug.log >> .gitignore`
     2. `git rm --cached debug.log`
     3. `git commit -m "Start ignoring debug.log"`
-- **Committing an ignored file**: `git add -f debug.log`
-- **Debugging `.gitignore` files**: `git check-ignore -v debug.log`
+- Committing an ignored file: `git add -f debug.log`
+- Debugging `.gitignore` files: `git check-ignore -v debug.log`
   
   The output shows:
   `<file containing the pattern>:<line number of the pattern>:<pattern>  <file name>`
@@ -833,4 +896,4 @@ Read about `git init`, `git clone`, `git config`, `git alias`, `git add`, `git c
 
 - `git push <remote> --force`: 😱
 - `git push <remote> --tags`: This flag sends all of your local tags to the remote repository as tags are not automatically pushed.
-- **Deleting a remote branch or tag**: `git branch -D branch_name` followed by `git push origin :branch_name`
+- Deleting a remote branch or tag: `git branch -D branch_name` followed by `git push origin :branch_name`
