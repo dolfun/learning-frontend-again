@@ -3,9 +3,28 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 21 (Sep 10)
+
+Read about [Class basic syntax](https://javascript.info/class) and [Error handling, "try...catch"](https://javascript.info/try-catch) \
+Read: [JavaScript Closure: The Beginner's Friendly Guide](https://dmitripavlutin.com/javascript-closure/), [Gentle Explanation of "this" in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/) and [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/).
+
+- `class User {...}`:
+
+  ```js
+  class User {
+    constructor(name) { this.name = name; }
+    func() { console.log(this.name); }
+  }
+
+  console.log(typeof User); // 'function'
+  console.log(User === User.prototype.constructor); // true
+  console.log(User.prototype.func); // [Function: func]
+  console.log(Object.getOwnPropertyNames(User.prototype)); // [ 'constructor', 'func' ]
+  ```
+
 ## Day 20 (Sep 9)
 
-Read about [Property flags and descriptors](https://javascript.info/property-descriptors), [Property getters and setters](https://javascript.info/property-accessors), [Prototypal inheritance](https://javascript.info/prototype-inheritance), [F.prototype](https://javascript.info/function-prototype), [Native prototypes](https://javascript.info/native-prototypes) and [Prototype methods, objects without __proto__](https://javascript.info/prototype-methods).
+Read about [Property flags and descriptors](https://javascript.info/property-descriptors), [Property getters and setters](https://javascript.info/property-accessors), [Prototypal inheritance](https://javascript.info/prototype-inheritance), [F.prototype](https://javascript.info/function-prototype), [Native prototypes](https://javascript.info/native-prototypes) and [Prototype methods, objects without \_\_proto__](https://javascript.info/prototype-methods).
 
 - Property flags: `writable`, `enumerable` and `configurable`
 - `const descriptor = Object.getOwnPropertyDescriptor(obj, propertyName)`
@@ -220,7 +239,6 @@ Read about [Iterables](https://javascript.info/iterable) and [Map and Set](https
 
   - `Object.entries(obj)`: Map from Object
   - `Object.fromEntries([[key, value], ...])`: Object from array of [`key`, `value`] pairs
-  - `map.entries()` returns an iterable of key/value pairs
 - `Set`:
   - `new Set([iterable])`
   - `set.add(value)`: returns the set itself

@@ -1,5 +1,8 @@
 # Resources
 
+- [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
+- [Gentle Explanation of "this" in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+- [JavaScript Closure: The Beginner's Friendly Guide](https://dmitripavlutin.com/javascript-closure/)
 - [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)
 - [The Modern JavaScript Tutorial](https://javascript.info/)
 - [A Complete CSS Grid Layout Guide](https://css-tricks.com/complete-guide-css-grid-layout/)
