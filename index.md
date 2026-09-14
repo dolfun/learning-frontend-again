@@ -3,6 +3,43 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 22 (Sep 11)
+
+Read about [Introduction: callbacks](https://javascript.info/callbacks), [Promise](https://javascript.info/promise-basics), [Promises chaining](https://javascript.info/promise-chaining), [Error handling with promises](https://javascript.info/promise-error-handling), [Promisification](https://javascript.info/promisify), [Microtasks](https://javascript.info/microtask-queue), [Event loop: microtasks and macrotasks](https://javascript.info/event-loophttps://javascript.info/event-loop) and [Async/await](https://javascript.info/async-await).
+
+- `const promise = new Promise((reslove, reject) => {...})`:
+  - We call `resolve(value)` if the job finished successfully and `reject(error)` if an error had occured.
+  - The returned `promise` object has a `state` property (which can be `"pending"`, `"fulfilled"` or `"rejected"`) and a `result` property (initially undefined, then changes to either `value` or `error` based on `resolve` or `reject` was called), both of which are internal.
+  - The executor should call only one `resolve` or one `reject`. Any state change is final.
+  - `promise.then((result) => {...}, (error) => {...} )`
+  - For errors only: `promise.catch((error) => {...})`
+  - `promise.finally(f)` is similar to `promise.then(f, f)`, but the `finally` handler has no arguments and it passes through the result or error to the next suitable handler.
+  - The return value of a `finally` handler is ignored.
+  - If the `finally` handler throws an error, then it goes to the next handler.
+  - Every call to `.then` returns a new promise.
+  - When a promise rejects, the control jumps to the closest rejection handler.
+  - Inside a promise executor and handler, `throw new Error(...)` works the same as `reject(new Error(...))`.
+- Promise API:
+  - `Promise.all`: It resolves when all listed promises are resolved, and the array of their results becomes its result. \
+  If any of the promises is rejected, the promise returned by `Promise.all` immediately rejects with that error and the other promises are ignored.
+  - `Promise.allSettled`: It just waits for all promises to settle, regardless of the result. The resulting array has:
+    - `{ status: "fulfilled", value: result }` for successful responses.
+    - `{ status: "rejected", reason: error }` for errors.
+  - `Promise.race`: It waits only for the first settled promise and gets its result (or error).
+  - `Promise.any`: It waits only for the first fulfilled promise and gets its result. \
+    If all of the given promises are rejected, then the returned promise is rejected with `AggregateError` – a special error object that stores all promise errors in its `errors` property.
+  - `Promise.resolve(value)` is same as `new Promise(resolve => resolve(value))`
+  - `Promise.reject(error)` is same as `new Promise((resolve, reject) => reject(error))`
+- The microtask queue is first-in-first-out and execution of a task is initiated only when nothing else is running.
+- There’s an in-browser minimal delay of 4ms for many nested `setTimeout` calls.
+- Immediately after every macrotask, the engine executes all tasks from microtask queue, prior to running any other macrotasks or rendering or anything else.
+- To schedule a new macrotask, use zero delayed `setTimeout(f)`.
+- To schedule a new microtask, use `queueMicrotask(f)`. Also promise handlers go through the microtask queue.
+- An `async` function always returns a promise, other values are wrapped into one automatically.
+- `await` only works inside `async` functions. It makes the execution wait until that promise settles and returns its result.
+- Modern browsers allow top-level `await` in modules.
+- `await` accepts “thenables”
+
 ## Day 21 (Sep 10)
 
 Read about [Class basic syntax](https://javascript.info/class) and [Error handling, "try...catch"](https://javascript.info/try-catch) \
