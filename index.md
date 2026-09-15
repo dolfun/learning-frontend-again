@@ -3,6 +3,35 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 23 (Sep 14)
+
+Read about [Browser environment, specs](https://javascript.info/browser-environment), [DOM tree](https://javascript.info/dom-nodes), [Walking the DOM](https://javascript.info/dom-navigation), [Searching: getElement*, querySelector*](https://javascript.info/searching-elements-dom), [Node properties: type, tag and contents](https://javascript.info/basic-dom-node-properties) and [Attributes and properties](https://javascript.info/dom-attributes-and-properties).
+
+- `<html>` = `document.documentElement`, `<body>` = `document.body` and `<head>` = `document.head`.
+- `childNodes` property lists all child nodes, including text nodes.
+- `childNodes` is not an array, it is a collection. It is iterable, but we cannot use array methods.
+- DOM collections are live and read-only.
+- `nextSibling`, `previousSibling` and `parentNode`.
+- For element only navigation: `children`, `parentElement`, `nextElementSibling`, `previousElementSibling`, `firstElementChild`, `lastElementChild`.
+- `parentElement` and `parentNode` are the same, except in the case of `document.documentElement`.
+- `document.getElementById(id)`
+- `elem.querySelectorAll(css)`
+- `elem.querySelector(css)` = `elem.querySelectorAll(css)[0]`
+- `elem.matches(css)`: returns `true` or `false`
+- `elem.closest(css)`: The nearest ancestor that matches the CSS-selector including itself.
+- `elem.getElementsByTagName(tag)`, `elem.getElementsByClassName(className)` and `document.getElementsByName(name)`
+- All methods `"getElementsBy*"` return a live collection.
+- `elemA.contains(elemB)`
+- The `innerHTML` property allows to get the HTML inside the element as a string.
+- The `outerHTML` property is `innerHTML` plus the element itself.
+- Writing to `outerHTML` replaces it in the DOM.
+- For text node we have `nodeValue` and `data` properties.
+- `textContent` is the text inside the elements without any tags.
+- `hidden` property is the same as `style="display:none"`.
+- `elem.hasAttribute(name)`, `elem.getAttribute(name)`, `elem.setAttribute(name, value)` and `elem.removeAttribute(name)`
+- HTML attributes' names are case-insensitive nd their values are always strings.
+- All attributes starting with `“data-”` are reserved for programmers’ use. They are available in the `dataset` property. (`data-order-state` become camel-cased: `dataset.orderState`)
+
 ## Day 22 (Sep 11)
 
 Read about [Introduction: callbacks](https://javascript.info/callbacks), [Promise](https://javascript.info/promise-basics), [Promises chaining](https://javascript.info/promise-chaining), [Error handling with promises](https://javascript.info/promise-error-handling), [Promisification](https://javascript.info/promisify), [Microtasks](https://javascript.info/microtask-queue), [Event loop: microtasks and macrotasks](https://javascript.info/event-loophttps://javascript.info/event-loop) and [Async/await](https://javascript.info/async-await).
