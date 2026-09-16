@@ -3,6 +3,24 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 24 (Sep 15)
+
+Read about [Modifying the document](https://javascript.info/modifying-document) and [Styles and classes](https://javascript.info/styles-and-classes)
+
+- `document.createElement(tag)` and `document.createTextNode(text)`
+- `node.append|prepend|before|after|replaceWith(...nodes or strings)`
+- `elem.insertAdjacentHTML("beforebegin"|"afterbegin"|"beforeend"|"afterend", html)`
+- `elem.insertAdjacentText(where, text)` and `elem.insertAdjacentElement(where, elem)`
+- `node.remove()`
+- All insertion methods automatically remove the node from the old place.
+- `node.cloneNode(deep)`
+- `DocumentFragment` holds a segment of a document structure without being part of the active DOM tree.
+- `elem.className` has methods to `add`/`remove`/`toggle` a single class. It is also iterable.
+- `elem.style.display = ""` and `elem.style.removeProperty('style property')`
+- The `style` property operates only on the value of the `style` attribute, without any CSS cascade.
+- `getComputedStyle(element, [pseudo])`: The result is an object with styles, with respect to all CSS classes.
+- Styles applied to `:visited` links are hidden!
+
 ## Day 23 (Sep 14)
 
 Read about [Browser environment, specs](https://javascript.info/browser-environment), [DOM tree](https://javascript.info/dom-nodes), [Walking the DOM](https://javascript.info/dom-navigation), [Searching: getElement*, querySelector*](https://javascript.info/searching-elements-dom), [Node properties: type, tag and contents](https://javascript.info/basic-dom-node-properties) and [Attributes and properties](https://javascript.info/dom-attributes-and-properties).
