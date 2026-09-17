@@ -3,6 +3,58 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 25 (Sep 16)
+
+Read [Introduction to browser events](https://javascript.info/introduction-browser-events), [Bubbling and capturing](https://javascript.info/bubbling-and-capturing), [Event delegation](https://javascript.info/event-delegation), [Browser default actions](https://javascript.info/default-browser-action), [Dispatching custom events](https://javascript.info/dispatch-events), [Modules, introduction](https://javascript.info/modules-intro), [Export and Import](https://javascript.info/import-export) and [Dynamic imports](https://javascript.info/modules-dynamic-imports).
+
+Read [JavaScript to Know for React](https://kentcdodds.com/blog/javascript-to-know-for-react)
+
+- A handler can be set in HTML with an attribute named `on<event>`. \
+  For example: \
+  `<input value="Click me" onclick="alert('Click!')" type="button">`
+- We can assign a handler using a DOM property `on<event>`.
+- The value of `this` inside a handler is the element.
+- `element.addEventListener(event, handler, [options])` and `element.removeEventListener(event, handler, [options])`
+- We can use objects as event handlers, in such case, its `handleEvent` method is called.
+- When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+- The most deeply nested element that caused the event is called a target element, accessible as `event.target`. (different from `this` or `event.currentTarget`)
+- `event.stopPropagation()` stops the move upwards, but on the current element all other handlers will run.
+- `event.stopImmediatePropagation()` stops other handlers as well.
+- `event.preventDefault()`
+- `let event = new Event(type[, options])` \
+  `options` is an object with two optional properties:
+  - `bubbles: true/false`
+  - `cancelable: true/false`: if `true`, then the “default action” may be prevented.
+  - By default both are `false`.
+- `elem.dispatchEvent(event)`
+- `event.isTrusted` is `true` for events that come from real user actions and `false` for script-generated events.
+- Custom events:
+  - For custom events we should use `CustomEvent` constructor.
+  - It has an additional option named `detail`, we should assign the event-specific data to it.
+  - Then all handlers can access it as `event.detail`.
+  - For example: \
+    `new CustomEvent("hello", { detail: { name: "John" } })`
+- Events-in-events using `dispatchEvent` are synchronous.
+- A module code is evaluated only the first time when imported.
+- The object `import.meta` contains the information about the current module.
+- In a module, `this` is undefined.
+- Module scripts (scripts with `type="module"`) are deferred.
+- import/export statements don’t work if inside `{...}`
+- Exporting:
+  - `export [default] class/function/variable ...`
+  - `export {x [as y], ...}`
+  - `export {x [as y], ...} from "module"`
+  - `export * from "module"` (doesn’t re-export default)
+  - `export {default [as y]} from "module"` (re-export default)
+- Importing:
+  - `import {x [as y], ...} from "module"`
+  - `import x from "module"`
+  - `import {default as x} from "module"`
+  - `import * as obj from "module"`
+  - `import "module"`
+- The `import(module)` expression loads the module and returns a promise that resolves into a module object that contains all its exports.
+- `let {foo, bar} = await import('./module.js')`
+
 ## Day 24 (Sep 15)
 
 Read about [Modifying the document](https://javascript.info/modifying-document) and [Styles and classes](https://javascript.info/styles-and-classes)
@@ -419,7 +471,7 @@ Read [Object to primitive conversion](https://javascript.info/object-toprimitive
 
 ## Day 15 (Sep 2)
 
-Read about [Debugging in the browser](https://javascript.info/debugging-chrome), [Polyfills and Transpilers](https://javascript.info/polyfills), [Garbage Collection](https://javascript.info/garbage-collection), [Constructor, operator "new"](https://javascript.info/constructor-new#constructor-mode-test-new-target), [Optional chaining '?.'](https://javascript.info/optional-chaining) and [Symbol type](https://javascript.info/symbol).
+Read about [Debugging in the browser](https://javascript.info/debugging-chrome), [Polyfills and Transpilers](https://javascript.info/polyfills), [Garbage Collection](https://javascript.info/garbage-collection), [Constructor, operator "new"](https://javascript.info/constructor-new), [Optional chaining '?.'](https://javascript.info/optional-chaining) and [Symbol type](https://javascript.info/symbol).
 
 - `this` is not bound and arrow functions have no `this`.
 - Constructor and `new` operator:

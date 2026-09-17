@@ -1,5 +1,7 @@
 # Resources
 
+- [async vs defer attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+- [JavaScript to Know for React](https://kentcdodds.com/blog/javascript-to-know-for-react)
 - [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
 - [Gentle Explanation of "this" in JavaScript](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
 - [JavaScript Closure: The Beginner's Friendly Guide](https://dmitripavlutin.com/javascript-closure/)
