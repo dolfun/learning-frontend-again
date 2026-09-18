@@ -3,6 +3,16 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 26 (Sep 17)
+
+Read about TypeScript: [The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) and [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+
+Read about React: [Quickstart](https://react.dev/learn), [Describing the UI](https://react.dev/learn/describing-the-ui), [Your First Component](https://react.dev/learn/your-first-component), [Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components), [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx) and [JavaScript in JSX with Curly Braces](https://react.dev/learn/javascript-in-jsx-with-curly-braces)
+
+- The Rules of JSX:
+  1. Return a single root element
+  2. Close all the tags
+
 ## Day 25 (Sep 16)
 
 Read [Introduction to browser events](https://javascript.info/introduction-browser-events), [Bubbling and capturing](https://javascript.info/bubbling-and-capturing), [Event delegation](https://javascript.info/event-delegation), [Browser default actions](https://javascript.info/default-browser-action), [Dispatching custom events](https://javascript.info/dispatch-events), [Modules, introduction](https://javascript.info/modules-intro), [Export and Import](https://javascript.info/import-export) and [Dynamic imports](https://javascript.info/modules-dynamic-imports).

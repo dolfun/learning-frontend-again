@@ -1,5 +1,7 @@
 # Resources
 
+- [react.dev](https://react.dev/)
+- [They TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [async vs defer attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 - [JavaScript to Know for React](https://kentcdodds.com/blog/javascript-to-know-for-react)
 - [5 Differences Between Arrow and Regular Functions](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
