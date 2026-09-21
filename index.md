@@ -3,6 +3,14 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 28 (Sep 21)
+
+Read about React: [Adding Interactivity](https://react.dev/learn/adding-interactivity), [Responding to Events](https://react.dev/learn/responding-to-events), [State: A Component's Memory](https://react.dev/learn/state-a-components-memory), [Render and Commit](https://react.dev/learn/render-and-commit), [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot), [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates), [Updating Objects in State](http://react.dev/learn/updating-objects-in-state), [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state), [memo](https://react.dev/reference/react/memo), [React Compiler](https://react.dev/learn/react-compiler/introduction) and [Rules of React](https://react.dev/reference/rules)
+
+- Unlike rendering functions, event handlers don’t need to be pure, they can have side effects.
+- React waits until all code in the event handlers has run before processing your state updates.
+- When updating nested state, you need to create copies from the point where you want to update, and all the way up to the top level.
+
 ## Day 27 (Sep 18)
 
 Read about TypeScript: [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
