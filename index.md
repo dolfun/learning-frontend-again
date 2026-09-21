@@ -3,6 +3,51 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 27 (Sep 18)
+
+Read about TypeScript: [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+
+Read about React: [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component), [Conditional Rendering](https://react.dev/learn/conditional-rendering), [Rendering Lists](https://react.dev/learn/rendering-lists), [Keeping Components Pure](https://react.dev/learn/keeping-components-pure) and [Understanding Your UI as a Tree](https://react.dev/learn/understanding-your-ui-as-a-tree).
+
+- JSX spread syntax: `<Avatar {...props} />`
+- Passing JSX as children:
+  
+  ```js
+  function Card({ children }) {
+    return (
+      <div className="card">
+        {children}
+      </div>
+    );
+  }
+  ```
+
+- Sharp corner `messageCount && <p>New messages</p>`, as React will happily render 0 rather than nothing. \
+  Fix: Make the left side a boolean, `messageCount > 0 && <p>New messages</p>`
+
+- Displaying several DOM nodes for each list item:
+  
+  ```js
+  const listItems = people.map(person =>
+    <Fragment key={person.id}>
+      <h1>{person.name}</h1>
+      <p>{person.bio}</p>
+    </Fragment>
+  );
+  ```
+
+- `typeof null === 'object'`
+- `x instanceof Foo` checks whether the prototype chain of `x` contains `Foo.prototype`
+- Type predicate:
+
+  ```ts
+  function isFish(pet: Fish | Bird): pet is Fish {
+    return (pet as Fish).swim !== undefined;
+  }
+  ```
+
+- The `never` type is assignable to every type; however, no type is assignable to `never` (except `never` itself).
+
 ## Day 26 (Sep 17)
 
 Read about TypeScript: [The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) and [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
