@@ -3,9 +3,54 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 29 (Sep 22)
+
+Read about TypeScript: [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+
+Read about React: [Reacting to Input with State](https://react.dev/learn/reacting-to-input-with-state), [Choosing the State Structure](https://react.dev/learn/choosing-the-state-structure) and [Sharing State Between Components](https://react.dev/learn/sharing-state-between-components).
+
+- Parameter name is required in function type expressions.
+- To describe something callable with properties, we can write a call signature in an object type:
+
+  ```ts
+  type DescribableFunction = {
+    description: string;
+    (someArg: number): boolean;
+  };
+  ```
+
+- Construst Signatures:
+
+  ```ts
+  type SomeConstructor = {
+    new (s: string): SomeObject;
+  };
+  ```
+
+- Generic Functions:
+
+  ```ts
+  function firstElement<Type>(arr: Type[]): Type | undefined {
+    return arr[0];
+  }
+  ```
+
+- Constraints: `function longest<Type extends { length: number }>(a: Type, b: Type) {...}`
+- Always use as few type parameters as possible.
+- `this` in a function: `filter: (this: User) => boolean`
+- `void` represents the return value of functions which don’t return a value. It is not the same as `undefined`.
+- The `unknown` type represents any value, but is safer because it’s not legal to do anything with it.
+- `never`: Some functions never return a value.
+- `function multiply(n: number, ...m: number[]) {...}`
+
+- Principles for structuring state:
+  - Group related state.
+  - Avoid contradictions in state.
+  - Avoid redundant state.
+
 ## Day 28 (Sep 21)
 
-Read about React: [Adding Interactivity](https://react.dev/learn/adding-interactivity), [Responding to Events](https://react.dev/learn/responding-to-events), [State: A Component's Memory](https://react.dev/learn/state-a-components-memory), [Render and Commit](https://react.dev/learn/render-and-commit), [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot), [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates), [Updating Objects in State](http://react.dev/learn/updating-objects-in-state), [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state), [memo](https://react.dev/reference/react/memo), [React Compiler](https://react.dev/learn/react-compiler/introduction) and [Rules of React](https://react.dev/reference/rules)
+Read about React: [Adding Interactivity](https://react.dev/learn/adding-interactivity), [Responding to Events](https://react.dev/learn/responding-to-events), [State: A Component's Memory](https://react.dev/learn/state-a-components-memory), [Render and Commit](https://react.dev/learn/render-and-commit), [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot), [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates), [Updating Objects in State](http://react.dev/learn/updating-objects-in-state), [Updating Arrays in State](https://react.dev/learn/updating-arrays-in-state), [memo](https://react.dev/reference/react/memo) and [React Compiler](https://react.dev/learn/react-compiler/introduction).
 
 - Unlike rendering functions, event handlers don’t need to be pure, they can have side effects.
 - React waits until all code in the event handlers has run before processing your state updates.
@@ -794,7 +839,7 @@ Read about CSS: psuedo-elements, [`position` property](https://css-tricks.com/al
 
 - `:is()` keeps the specificity of its most specific argument while `:where()` always has zero specificity.
 - Units cheatsheet:
-  ![CSS Units](https://yurilee.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1626960364359%2FRITHUchJLk.png&w=3840&q=100)
+  ![CSS Units](https://cdn.hashnode.com/res/hashnode/image/upload/v1626960364359/RITHUchJLk.png)
 - `position` property can take the following values:
   - `static`: Default. Element sticks to the normal page flow. `left`/`right`/`top`/`bottom`/`z-index` have no effect.
   - `relative`: Same as `static` but the positional properties move the element from the original position in that direction.
