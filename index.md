@@ -3,6 +3,13 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 30 (Sep 23)
+
+Read about React: [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state), [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) and [Scaling Up with Reducer and Context](https://react.dev/learn/scaling-up-with-reducer-and-context).
+
+- Keys aren’t just for lists, you can use keys to make React distinguish between any components.
+- `const [tasks, dispatch] = useReducer(tasksReducer, initialTasks)`
+
 ## Day 29 (Sep 22)
 
 Read about TypeScript: [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
