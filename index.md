@@ -3,6 +3,38 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 31 (Sep 24)
+
+Read about React: [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs), [Manipulating the DOM with Refs](https://react.dev/learn/manipulating-the-dom-with-refs), [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) and [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect).
+
+- `useRef(initialValue)` returns `{ current: initialValue }`.
+- Don’t read or write `ref.current` during rendering.
+- `if (!ref.current) ref.current = new Thing()` is okay in some context.
+- When you pass a ref to a `ref` attribute in JSX, like `<div ref={myRef}>`, React will put the corresponding DOM element into `myRef.current`.
+- [`ref` callbacks](https://react.dev/learn/manipulating-the-dom-with-refs#how-to-manage-a-list-of-refs-using-a-ref-callback)
+- React sets `ref.current` during the commit.
+- [`flushSync`](https://react.dev/learn/manipulating-the-dom-with-refs#flushing-state-updates-synchronously-with-flush-sync)
+- Effect run after every commit.
+- React compares the dependency values using the `Object.is` comparison.
+- [Storing information from previous renders](https://react.dev/reference/react/useState#storing-information-from-previous-renders)
+
+  ```js
+  export default function CountLabel({ count }) {
+    const [prevCount, setPrevCount] = useState(count);
+    const [trend, setTrend] = useState(null);
+    if (prevCount !== count) {
+      setPrevCount(count);
+      setTrend(count > prevCount ? 'increasing' : 'decreasing');
+    }
+    return (
+      <>
+        <h1>{count}</h1>
+        {trend && <p>The count is {trend}</p>}
+      </>
+    );
+  }
+  ```
+
 ## Day 30 (Sep 23)
 
 Read about React: [Preserving and Resetting State](https://react.dev/learn/preserving-and-resetting-state), [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) and [Scaling Up with Reducer and Context](https://react.dev/learn/scaling-up-with-reducer-and-context).
