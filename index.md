@@ -3,6 +3,15 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 32 (Sep 28)
+
+Read about React: [Lifecycle of Reactive Effects](https://react.dev/learn/lifecycle-of-reactive-effects), [Separating Events from Effects](https://react.dev/learn/separating-events-from-effects), [Removing Effect Dependencies](https://react.dev/learn/removing-effect-dependencies) and [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks).
+
+- Dependency list is compared with `Object.is`.
+- Use a special Hook called `useEffectEvent` to extract this non-reactive logic out of your Effect.
+  - Only call them from inside Effects
+  - Never pass them to other components or Hooks
+
 ## Day 31 (Sep 24)
 
 Read about React: [Referencing Values with Refs](https://react.dev/learn/referencing-values-with-refs), [Manipulating the DOM with Refs](https://react.dev/learn/manipulating-the-dom-with-refs), [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) and [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect).
