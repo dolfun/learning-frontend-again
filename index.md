@@ -3,6 +3,18 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 33 (Sep 29)
+
+Read about [useCallback](https://react.dev/reference/react/useCallback), [useEffectEvent](https://react.dev/reference/react/useEffectEvent), [useMemo](https://react.dev/reference/react/useMemo), [`<Fragment> (<>...</>)`](https://react.dev/reference/react/Fragment) and [memo](https://react.dev/reference/react/memo).
+
+- Effect Events are not stable.
+- Only use Effect Events for logic that genuinely should not re-trigger your Effect.
+- Strict Mode enables the following development-only behaviors:
+  - Your components will re-render an extra time.
+  - Your components will re-run Effects an extra time.
+  - Your components will re-run refs callbacks an extra time.
+  - Your components will be checked for usage of deprecated APIs.
+
 ## Day 32 (Sep 28)
 
 Read about React: [Lifecycle of Reactive Effects](https://react.dev/learn/lifecycle-of-reactive-effects), [Separating Events from Effects](https://react.dev/learn/separating-events-from-effects), [Removing Effect Dependencies](https://react.dev/learn/removing-effect-dependencies) and [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks).
