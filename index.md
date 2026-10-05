@@ -3,6 +3,10 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 35 (Oct 1)
+
+Read [Application State Management with React](https://kentcdodds.com/blog/application-state-management-with-react), [State Colocation will make your React app faster](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster), [Fix the slow render before you fix the re-render](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render).
+
 ## Day 34 (Sep 30)
 
 Read about [useLayoutEffect](https://react.dev/reference/react/useLayoutEffect), [`<StrictMode>`](https://react.dev/reference/react/StrictMode), [useImperativeHandle](https://react.dev/reference/react/useImperativeHandle) and [useTransition](https://react.dev/reference/react/useTransition), [startTransition](https://react.dev/reference/react/startTransition).
