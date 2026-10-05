@@ -3,6 +3,10 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 34 (Sep 30)
+
+Read about [useLayoutEffect](https://react.dev/reference/react/useLayoutEffect), [`<StrictMode>`](https://react.dev/reference/react/StrictMode), [useImperativeHandle](https://react.dev/reference/react/useImperativeHandle) and [useTransition](https://react.dev/reference/react/useTransition), [startTransition](https://react.dev/reference/react/startTransition).
+
 ## Day 33 (Sep 29)
 
 Read about [useCallback](https://react.dev/reference/react/useCallback), [useEffectEvent](https://react.dev/reference/react/useEffectEvent), [useMemo](https://react.dev/reference/react/useMemo), [`<Fragment> (<>...</>)`](https://react.dev/reference/react/Fragment) and [memo](https://react.dev/reference/react/memo).
