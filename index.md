@@ -3,6 +3,25 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 36 (Oct 5)
+
+Read about TypeScript: [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html), [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html), [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html), [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html), [Typeof Type Operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html) and [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html).
+
+- `const [todos, setTodos] = useState<readonly Todo[]>([]);`
+- Index signature:
+
+  ```ts
+  interface StringArray {
+    [index: number]: string;string
+  }
+  ```
+
+- `type IdentityFn = <T>(arg: T) => T` vs `type IdentityFnOf<T> = (arg: T) => T`
+- `function getProperty<T, K extends keyof T>(obj: T, key: K) { return obj[key]; }`
+- `type ApiResponse<T = unknown> = { data: T; error: string | null }`
+- `function sortBy<T>(items: T[], key: keyof T) { ... }`
+- `type Age = Person["age"]`
+
 ## Day 35 (Oct 1)
 
 Read [Application State Management with React](https://kentcdodds.com/blog/application-state-management-with-react), [State Colocation will make your React app faster](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster), [Fix the slow render before you fix the re-render](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render).
