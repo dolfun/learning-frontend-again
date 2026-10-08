@@ -3,6 +3,45 @@
 Do check out my [GitHub](http://github.com/dolfun/) or my [ShaderToy](https://www.shadertoy.com/user/Dolfun) profile. \
 [Resources page](resources.md)
 
+## Day 37 (Oct 6)
+
+Read about TypeScript: [Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html), [Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html), [Template Literal Types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html) and [Modules](https://www.typescriptlang.org/docs/handbook/2/modules.html).
+
+Read about React: [`<Suspense>`](https://react.dev/reference/react/Suspense), [`lazy`](https://react.dev/reference/react/lazy), [`use`](https://react.dev/reference/react/use) and [useDeferredValue](https://react.dev/reference/react/useDeferredValue).
+
+Read about GraphQL: [Introduction to GraphQL](https://graphql.org/learn/introduction/).
+
+- `type NameOrId<T extends number | string> = T extends number ? IdLabel : NameLabel`
+- `type Flatten<T> = T extends Array<infer Item> ? Item : T`
+- `type GetReturnType<T> = T extends (...args: never[]) => infer R ? R : never`
+- `type ToArray<T> = T extends any ? T[] : never`
+- `type ToArrayNonDist<T> = [T] extends [any] ? T[] : never`
+- `type OptionsFlags<T> = { [K in keyof T]: boolean; }`
+- `type Partial<T> = { [K in keyof T]?: T[K] }`
+- `type Readonly<T> = { readonly [K in keyof T]: T[K] }`
+- `keyof any` evaluates to the union type `string | number | symbol`
+- `type Record<K extends keyof any, V> = { [P in K]: V }`
+- You can add or remove `readonly` and `?` while mapping. With no prefix, `+` is assumed.
+- `type CreateMutable<T> = { -readonly [K in keyof T]: T[K] }`
+- `type Concrete<T> = { [K in keyof T]-?: T[K] }`
+- Key remapping with `as`:
+
+  ```ts
+  type Getters<T> = {
+    [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K];
+  }
+  ```
+
+- Remove keys by mapping them to `never`:
+
+  ```ts
+  type RemoveKind<T> = {
+    [K in keyof T as Exclude<K, "kind">]: T[K];
+  }
+  ```
+
+- Unions produce every combination: `` type Key = `${Lang}_${Id}` ``
+
 ## Day 36 (Oct 5)
 
 Read about TypeScript: [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html), [Creating Types from Types](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html), [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html), [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html), [Typeof Type Operator](https://www.typescriptlang.org/docs/handbook/2/typeof-types.html) and [Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html).
